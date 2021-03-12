@@ -31,6 +31,13 @@ html {
   padding: 48px 24px 24px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
 }
 
 body {
@@ -219,6 +226,17 @@ a:focus {
   padding: 0 24px;
 }
 
+.c-article__date {
+  padding: 0;
+}
+
+.c-quote{
+    background: #F2FAF8;
+    color: #00B37D;
+    padding: 24px 24px;
+    margin: 48px 0px;
+}
+
 @media (min-width: 768px) {
   .c-article__header {
     padding: 48px 48px 24px;
@@ -229,9 +247,12 @@ a:focus {
   .c-article__body {
     padding: 24px 48px;
   }
+  .c-article__title {
+    font-size: 48px;
+  }
 }
 
-@media (min-width: 992) {
+@media (min-width: 992px) {
   .c-article__body {
     display: flex;
     gap: 24px;
@@ -242,9 +263,9 @@ a:focus {
   .c-article__content {
     width: 75%;
   }
-  .c-author{
-      flex-direction: column;
-      align-items: start;
+  .c-author {
+    flex-direction: column;
+    align-items: start;
   }
 }
 
@@ -253,10 +274,9 @@ a:focus {
     ---
     Utility classes to put specific max widths onto elements
 */
-.u-max-width-sm{
-    max-width: 36em;
+.u-max-width-sm {
+  max-width: 36em;
 }
-
 
 /* Small devices (landscape phones, 576px and up) */
 
